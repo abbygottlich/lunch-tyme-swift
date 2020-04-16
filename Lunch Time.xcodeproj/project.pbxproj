@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		ED775D2C2444E962003C8A8C /* Lunch_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D2B2444E962003C8A8C /* Lunch_TimeTests.swift */; };
 		ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D3624474B7E003C8A8C /* DataFetcher.swift */; };
 		EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */; };
+		EDDBD2F12448DD5C00991803 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = EDDBD2F02448DD5C00991803 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,19 @@
 			remoteInfo = "Lunch Time";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDDBD3092448E22800991803 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ED775D112444E960003C8A8C /* Lunch Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDBD2F12448DD5C00991803 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 				ED775D132444E960003C8A8C /* Lunch Time */,
 				ED775D2A2444E962003C8A8C /* Lunch TimeTests */,
 				ED775D122444E960003C8A8C /* Products */,
+				EDDBD3062448E22800991803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +121,13 @@
 			path = "Lunch TimeTests";
 			sourceTree = "<group>";
 		};
+		EDDBD3062448E22800991803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,12 +138,16 @@
 				ED775D0D2444E960003C8A8C /* Sources */,
 				ED775D0E2444E960003C8A8C /* Frameworks */,
 				ED775D0F2444E960003C8A8C /* Resources */,
+				EDDBD3092448E22800991803 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Lunch Time";
+			packageProductDependencies = (
+				EDDBD2F02448DD5C00991803 /* Nuke */,
+			);
 			productName = "Lunch Time";
 			productReference = ED775D112444E960003C8A8C /* Lunch Time.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +198,9 @@
 				Base,
 			);
 			mainGroup = ED775D082444E960003C8A8C;
+			packageReferences = (
+				EDDBD2EF2448DD5C00991803 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = ED775D122444E960003C8A8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -473,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDDBD2EF2448DD5C00991803 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDDBD2F02448DD5C00991803 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDDBD2EF2448DD5C00991803 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED775D092444E960003C8A8C /* Project object */;
 }

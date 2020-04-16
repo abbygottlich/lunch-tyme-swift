@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Nuke
 
 class ViewController: UIViewController {
     
@@ -53,8 +54,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantCell", for: indexPath) as! CollectionViewCell
-//        cell.restaurantImageView.image = UIImage(imageLiteralResourceName: restaurants[indexPath.row].backgroundImageURL ?? "")
-        cell.restaurantName.text = restaurants[indexPath.row].name
+        let url = URL(string: restaurants[indexPath.row].backgroundImageURL)
+        
+        let fileName = "cellGradientBackground@2x.png"
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + fileName
+        let image = UIImage(contentsOfFile: path)
+        Nuke.loadImage(with: url!, into: cell.restaurantImage)
+        cell.restaurantName.text = restaurants[indexPath.row].name ?? ""
+//        cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
+//        cell.gradientImage.image = image
+        
+        
         return cell
     }
     

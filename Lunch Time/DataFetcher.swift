@@ -14,7 +14,7 @@ import Foundation
 //Adding the question marks at the end of a type makes them optional
 struct Restaurant: Codable {
     var name: String?
-    var backgroundImageURL: String?
+    var backgroundImageURL: String
     var category: String?
     var contact: ContactInfo?
     var location: RestaurantLocation?

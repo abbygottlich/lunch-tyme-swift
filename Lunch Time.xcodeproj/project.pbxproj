@@ -14,6 +14,8 @@
 		ED775D1E2444E962003C8A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED775D1D2444E962003C8A8C /* Assets.xcassets */; };
 		ED775D212444E962003C8A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED775D1F2444E962003C8A8C /* LaunchScreen.storyboard */; };
 		ED775D2C2444E962003C8A8C /* Lunch_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D2B2444E962003C8A8C /* Lunch_TimeTests.swift */; };
+		ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D3624474B7E003C8A8C /* DataFetcher.swift */; };
+		EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		ED775D272444E962003C8A8C /* Lunch TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunch TimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED775D2B2444E962003C8A8C /* Lunch_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_TimeTests.swift; sourceTree = "<group>"; };
 		ED775D2D2444E962003C8A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED775D3624474B7E003C8A8C /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 				ED775D162444E960003C8A8C /* SceneDelegate.swift */,
 				ED775D182444E960003C8A8C /* ViewController.swift */,
 				ED775D1A2444E960003C8A8C /* Main.storyboard */,
+				EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */,
 				ED775D1D2444E962003C8A8C /* Assets.xcassets */,
 				ED775D1F2444E962003C8A8C /* LaunchScreen.storyboard */,
 				ED775D222444E962003C8A8C /* Info.plist */,
+				ED775D3624474B7E003C8A8C /* DataFetcher.swift */,
 			);
 			path = "Lunch Time";
 			sourceTree = "<group>";
@@ -200,9 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */,
 				ED775D192444E960003C8A8C /* ViewController.swift in Sources */,
 				ED775D152444E960003C8A8C /* AppDelegate.swift in Sources */,
 				ED775D172444E960003C8A8C /* SceneDelegate.swift in Sources */,
+				ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

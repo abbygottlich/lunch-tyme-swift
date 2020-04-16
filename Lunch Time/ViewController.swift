@@ -35,7 +35,6 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self.restaurants = resp
                 self.collectionView.reloadData()
-                print(resp)
                 
 //            print(self.restaurants[0].name ?? "No restaurant available")
 //                for restaurant in self.restaurants {
@@ -46,10 +45,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("Restaurants", restaurants)
         return restaurants.count
     }
 
@@ -58,6 +56,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 //        cell.restaurantImageView.image = UIImage(imageLiteralResourceName: restaurants[indexPath.row].backgroundImageURL ?? "")
         cell.restaurantName.text = restaurants[indexPath.row].name
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = 180
+        return CGSize(width: collectionView.bounds.size.width, height: CGFloat(height))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
 

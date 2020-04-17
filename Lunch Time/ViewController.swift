@@ -47,7 +47,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+//    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol
 
+//    This func returns the size of the restaurants array
+//    I'm not sure that it's actually needed for the functionality of the app, but it must be included since we are conforming to the UICollectionViewDataSource protocol
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restaurants.count
     }
@@ -55,15 +58,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantCell", for: indexPath) as! CollectionViewCell
         let url = URL(string: restaurants[indexPath.row].backgroundImageURL)
-        
-        let fileName = "cellGradientBackground@2x.png"
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + fileName
-        let image = UIImage(contentsOfFile: path)
+//        let imageView = UIImageView(image: image)
         Nuke.loadImage(with: url!, into: cell.restaurantImage)
+//        cell.restaurantImage.addSubview(imageView)
         cell.restaurantName.text = restaurants[indexPath.row].name ?? ""
-//        cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
-//        cell.gradientImage.image = image
-        
+        cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
         
         return cell
     }

@@ -55,23 +55,24 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         return restaurants.count
     }
 
+//    This func is what creates each cell with the image, gradient, and text
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantCell", for: indexPath) as! CollectionViewCell
         let url = URL(string: restaurants[indexPath.row].backgroundImageURL)
-//        let imageView = UIImageView(image: image)
         Nuke.loadImage(with: url!, into: cell.restaurantImage)
-//        cell.restaurantImage.addSubview(imageView)
         cell.restaurantName.text = restaurants[indexPath.row].name ?? ""
         cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
         
         return cell
     }
     
+//    This func sets the height for each cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = 180
         return CGSize(width: collectionView.bounds.size.width, height: CGFloat(height))
     }
     
+//    This func removes the default margin spacing between cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

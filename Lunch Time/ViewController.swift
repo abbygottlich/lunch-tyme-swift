@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
 //    This line of code is creating a variable that is equal to an empty array of type Restaurant Array
     var restaurants: [Restaurant] = []
+    var selectedRestaurant: [Restaurant] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,6 @@ class ViewController: UIViewController {
         
 //        Calling the fetchRestaurants function written below
         fetchRestaurants()
-
     }
     
     func fetchRestaurants() {
@@ -47,10 +47,20 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+//5. Conform to delegate method
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MyCellDelegate {
     
-    @objc func restaurantTapped() {
-        print("selected")
+    //6. Implementing Delegate Method
+    func RestaurantBtnTapped(cell: CollectionViewCell) {
+        //Getting the indexpath of cell where button was tapped
+        let indexPath = self.collectionView.indexPath(for: cell)
+        
+        for (index, restaurant) in restaurants.enumerated() {
+            if index == indexPath?.row {
+                selectedRestaurant.append(restaurant)
+                print(selectedRestaurant)
+            }
+        }
     }
     
 //    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol
@@ -68,7 +78,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         Nuke.loadImage(with: url!, into: cell.restaurantImage)
         cell.restaurantName.text = restaurants[indexPath.row].name ?? ""
         cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
-        cell.restaurantButton.addTarget(self, action: #selector(restaurantTapped), for: UIControl.Event.touchUpInside)
+        
+        //7. delegating view controller instance to the cell
+        cell.delegate = self
+        
         return cell
     }
     

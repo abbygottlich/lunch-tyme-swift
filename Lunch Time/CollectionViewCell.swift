@@ -10,6 +10,8 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var restaurantButton: UIButton!
+    
     @IBOutlet weak var restaurantName: UILabel!
 
     @IBOutlet weak var restaurantImage: UIImageView!

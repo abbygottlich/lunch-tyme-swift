@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
 //        Calling the fetchRestaurants function written below
         fetchRestaurants()
+
     }
     
     func fetchRestaurants() {
@@ -47,6 +48,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    @objc func restaurantTapped() {
+        print("selected")
+    }
+    
 //    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol
 
 //    This func returns the size of the restaurants array
@@ -62,7 +68,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         Nuke.loadImage(with: url!, into: cell.restaurantImage)
         cell.restaurantName.text = restaurants[indexPath.row].name ?? ""
         cell.restaurantCategory.text = restaurants[indexPath.row].category ?? ""
-        
+        cell.restaurantButton.addTarget(self, action: #selector(restaurantTapped), for: UIControl.Event.touchUpInside)
         return cell
     }
     
@@ -77,4 +83,3 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         return 0
     }
 }
-

@@ -17,7 +17,6 @@
 		ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D3624474B7E003C8A8C /* DataFetcher.swift */; };
 		EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */; };
 		EDDBD2F12448DD5C00991803 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = EDDBD2F02448DD5C00991803 /* Nuke */; };
-		EDDBD310244DEC0600991803 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBD30F244DEC0600991803 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		ED775D2D2444E962003C8A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED775D3624474B7E003C8A8C /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		EDDBD30F244DEC0600991803 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 				ED775D142444E960003C8A8C /* AppDelegate.swift */,
 				ED775D162444E960003C8A8C /* SceneDelegate.swift */,
 				ED775D182444E960003C8A8C /* ViewController.swift */,
-				EDDBD30F244DEC0600991803 /* DetailView.swift */,
 				ED775D1A2444E960003C8A8C /* Main.storyboard */,
 				EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */,
 				ED775D1D2444E962003C8A8C /* Assets.xcassets */,
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */,
-				EDDBD310244DEC0600991803 /* DetailView.swift in Sources */,
 				ED775D192444E960003C8A8C /* ViewController.swift in Sources */,
 				ED775D152444E960003C8A8C /* AppDelegate.swift in Sources */,
 				ED775D172444E960003C8A8C /* SceneDelegate.swift in Sources */,

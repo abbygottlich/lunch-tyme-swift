@@ -52,6 +52,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     
     //6. Implementing Delegate Method
     func RestaurantBtnTapped(cell: CollectionViewCell) {
+        selectedRestaurant = []
         //Getting the indexpath of cell where button was tapped
         let indexPath = self.collectionView.indexPath(for: cell)
         

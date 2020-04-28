@@ -113,7 +113,7 @@
                     <view key="view" contentMode="scaleAspectFill" id="MV6-a8-dcG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mxl-ah-dY3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="vmf-vi-q64"/>
@@ -125,18 +125,108 @@
         <!--Item 1-->
         <scene sceneID="x5r-Ch-iDU">
             <objects>
-                <viewController id="Z1c-Oj-d3a" sceneMemberID="viewController">
+                <viewController id="Z1c-Oj-d3a" customClass="TabOneController" customModule="Lunch_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="j3X-3q-3UB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u2m-Ye-6oV">
+                                <rect key="frame" x="0.0" y="88" width="415" height="724"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K14-g1-xM4">
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="180"/>
+                                    </mapView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Me-6U-4G6">
+                                        <rect key="frame" x="0.0" y="180" width="415" height="544"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lcv-1e-ntd">
+                                                <rect key="frame" x="0.0" y="0.0" width="416" height="547"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBV-uG-faw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="416" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-h9-sGk">
+                                                                <rect key="frame" x="28" y="8" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adK-c1-f1a">
+                                                                <rect key="frame" x="28" y="31" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRn-fT-vLY">
+                                                        <rect key="frame" x="0.0" y="60" width="416" height="487"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-NB-d8W">
+                                                                <rect key="frame" x="27" y="21" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgJ-i0-086">
+                                                                <rect key="frame" x="27" y="50" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsQ-2u-thk">
+                                                                <rect key="frame" x="27" y="79" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-el-9Za">
+                                                                <rect key="frame" x="27" y="108" width="42" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="sWa-ug-wGn"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="H1b-lY-iyo"/>
+                                    </scrollView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fjH-0A-2uz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="8z8-Bt-jZq"/>
+                    <connections>
+                        <outlet property="cityState" destination="ZgJ-i0-086" id="YiV-TC-rkY"/>
+                        <outlet property="detailHeader" destination="PBV-uG-faw" id="3Xr-rH-4dL"/>
+                        <outlet property="detailInfo" destination="ggC-h9-sGk" id="98g-Le-pxv"/>
+                        <outlet property="detailRestaurantCategory" destination="adK-c1-f1a" id="jar-fp-jYJ"/>
+                        <outlet property="detailRestaurantName" destination="ggC-h9-sGk" id="aOc-Rs-MPa"/>
+                        <outlet property="innerStackView" destination="Lcv-1e-ntd" id="QjD-rN-bd9"/>
+                        <outlet property="mapView" destination="K14-g1-xM4" id="5T3-T6-AY4"/>
+                        <outlet property="outerStackView" destination="u2m-Ye-6oV" id="8ri-SX-opk"/>
+                        <outlet property="phoneNumber" destination="gsQ-2u-thk" id="nwb-9Y-c2B"/>
+                        <outlet property="scrollView" destination="0Me-6U-4G6" id="ySp-br-JeT"/>
+                        <outlet property="streetNumber" destination="y9S-NB-d8W" id="XPY-eL-VVq"/>
+                        <outlet property="twitterHandle" destination="5Bi-el-9Za" id="bld-Pm-PaL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vt1-Jm-eYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3043" y="-192"/>
+            <point key="canvasLocation" x="3042.0289855072465" y="-192.1875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gzS-a6-cNz">

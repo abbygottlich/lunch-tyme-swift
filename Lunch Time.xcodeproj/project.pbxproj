@@ -15,7 +15,7 @@
 		ED775D212444E962003C8A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED775D1F2444E962003C8A8C /* LaunchScreen.storyboard */; };
 		ED775D2C2444E962003C8A8C /* Lunch_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D2B2444E962003C8A8C /* Lunch_TimeTests.swift */; };
 		ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED775D3624474B7E003C8A8C /* DataFetcher.swift */; };
-		EDBAA624245775780036EEA6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAA623245775780036EEA6 /* TabBarController.swift */; };
+		EDBAA62624577BC60036EEA6 /* TabOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBAA62524577BC60036EEA6 /* TabOneController.swift */; };
 		EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */; };
 		EDDBD2F12448DD5C00991803 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = EDDBD2F02448DD5C00991803 /* Nuke */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		ED775D2B2444E962003C8A8C /* Lunch_TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_TimeTests.swift; sourceTree = "<group>"; };
 		ED775D2D2444E962003C8A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED775D3624474B7E003C8A8C /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
-		EDBAA623245775780036EEA6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EDBAA62524577BC60036EEA6 /* TabOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOneController.swift; sourceTree = "<group>"; };
 		EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,7 @@
 				ED775D142444E960003C8A8C /* AppDelegate.swift */,
 				ED775D162444E960003C8A8C /* SceneDelegate.swift */,
 				ED775D182444E960003C8A8C /* ViewController.swift */,
-				EDBAA623245775780036EEA6 /* TabBarController.swift */,
+				EDBAA62524577BC60036EEA6 /* TabOneController.swift */,
 				ED775D1A2444E960003C8A8C /* Main.storyboard */,
 				EDDBD2ED2447C09F00991803 /* CollectionViewCell.swift */,
 				ED775D1D2444E962003C8A8C /* Assets.xcassets */,
@@ -241,8 +241,8 @@
 			files = (
 				EDDBD2EE2447C09F00991803 /* CollectionViewCell.swift in Sources */,
 				ED775D192444E960003C8A8C /* ViewController.swift in Sources */,
+				EDBAA62624577BC60036EEA6 /* TabOneController.swift in Sources */,
 				ED775D152444E960003C8A8C /* AppDelegate.swift in Sources */,
-				EDBAA624245775780036EEA6 /* TabBarController.swift in Sources */,
 				ED775D172444E960003C8A8C /* SceneDelegate.swift in Sources */,
 				ED775D3724474B7E003C8A8C /* DataFetcher.swift in Sources */,
 			);

@@ -17,7 +17,6 @@ class ViewController: UIViewController {
 //    This line of code is creating a variable that is equal to an empty array of type Restaurant Array
     var restaurants: [Restaurant] = []
     var selectedRestaurant: [Restaurant] = []
-    var nameText: String!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +53,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 //    prepping segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! TabBarController
-        vc.finalName = self.nameText
+        vc.tappedRestaurant = self.selectedRestaurant
     }
     
     //6. Implementing Delegate Method
     func RestaurantBtnTapped(cell: CollectionViewCell, sender: Any) {
-        
-//       "calling" the segue function
-        self.nameText = "blahblahblah"
-        performSegue(withIdentifier: "name", sender: self)
         
         selectedRestaurant = []
         //Getting the indexpath of cell where button was tapped
@@ -74,6 +69,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 //                print(selectedRestaurant)
             }
         }
+        //       "calling" the segue function
+        performSegue(withIdentifier: "restaurantData", sender: self)
     }
     
 //    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol

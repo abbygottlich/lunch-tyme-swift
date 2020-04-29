@@ -11,10 +11,10 @@ import Foundation
 
 class TabBarController: UITabBarController {
     
-    var finalName = ""
+    var tappedRestaurant: [Restaurant] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("final name", finalName)
+        print("selected restaurant", tappedRestaurant[0])
     }
 }

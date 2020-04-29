@@ -40,7 +40,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="RestaurantBtnTapped:" destination="7ML-J9-hef" eventType="touchUpInside" id="Ah7-96-ODu"/>
-                                                        <segue destination="65W-hw-N6p" kind="show" id="ifa-1w-N4t"/>
+                                                        <segue destination="65W-hw-N6p" kind="show" identifier="name" id="ifa-1w-N4t"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-zh-WL6">
@@ -231,7 +231,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gzS-a6-cNz">
             <objects>
-                <tabBarController id="65W-hw-N6p" sceneMemberID="viewController">
+                <tabBarController id="65W-hw-N6p" customClass="TabBarController" customModule="Lunch_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="r9F-CX-KPJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4z4-vY-yht">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

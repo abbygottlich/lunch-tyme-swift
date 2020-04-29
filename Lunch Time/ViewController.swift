@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 //    This line of code is creating a variable that is equal to an empty array of type Restaurant Array
     var restaurants: [Restaurant] = []
     var selectedRestaurant: [Restaurant] = []
+    var nameText: String!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +51,19 @@ class ViewController: UIViewController {
 //5. Conform to delegate method
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MyCellDelegate {
     
+//    prepping segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! TabBarController
+        vc.finalName = self.nameText
+    }
+    
     //6. Implementing Delegate Method
-    func RestaurantBtnTapped(cell: CollectionViewCell) {
+    func RestaurantBtnTapped(cell: CollectionViewCell, sender: Any) {
+        
+//       "calling" the segue function
+        self.nameText = "blahblahblah"
+        performSegue(withIdentifier: "name", sender: self)
+        
         selectedRestaurant = []
         //Getting the indexpath of cell where button was tapped
         let indexPath = self.collectionView.indexPath(for: cell)
@@ -59,7 +71,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         for (index, restaurant) in restaurants.enumerated() {
             if index == indexPath?.row {
                 selectedRestaurant.append(restaurant)
-                print(selectedRestaurant)
+//                print(selectedRestaurant)
             }
         }
     }

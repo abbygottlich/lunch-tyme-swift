@@ -70,7 +70,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             }
         }
         //       "calling" the segue function
-        performSegue(withIdentifier: "restaurantData", sender: self)
     }
     
 //    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol

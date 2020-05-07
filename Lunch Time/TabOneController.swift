@@ -31,6 +31,18 @@ class TabOneController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("selected restaurant", tappedRestaurant)
+        detailRestaurantName.text = tappedRestaurant[0].name
+        detailRestaurantCategory.text = tappedRestaurant[0].category
+        streetNumber.text = tappedRestaurant[0].location?.address
+        cityState.text = tappedRestaurant[0].location?.formattedAddress?[1]
+        
+        phoneNumber.text = (tappedRestaurant[0].contact?.formattedPhone != nil) ? tappedRestaurant[0].contact?.formattedPhone : ("Phone number not available")
+        
+        twitterHandle.text = (tappedRestaurant[0].contact?.twitter != nil) ? "@\(tappedRestaurant[0].contact?.twitter ?? "")" : ("")
+        
+        
+//        twitterHandle.text = "@\(tappedRestaurant[0].contact?.twitter ?? "")"
+        
+        print("selected restaurant", tappedRestaurant[0])
     }
 }

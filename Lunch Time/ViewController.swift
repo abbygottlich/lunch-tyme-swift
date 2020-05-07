@@ -50,10 +50,11 @@ class ViewController: UIViewController {
 //5. Conform to delegate method
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MyCellDelegate {
     
-//    prepping segue
+//    prepping segue to send selected restaurant data to TabOneController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! TabBarController
-        vc.tappedRestaurant = self.selectedRestaurant
+        let tabOne = vc.viewControllers?[0] as! TabOneController
+        tabOne.tappedRestaurant = self.selectedRestaurant
     }
     
     //6. Implementing Delegate Method
@@ -69,7 +70,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 //                print(selectedRestaurant)
             }
         }
-        //       "calling" the segue function
     }
     
 //    UICollectionViewDataSource is a protocol that includes both of the collectionView funcs below, so they must be included in this ViewController class extension since it conforms to that protocol

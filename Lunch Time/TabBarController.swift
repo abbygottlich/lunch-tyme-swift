@@ -10,11 +10,7 @@ import UIKit
 import Foundation
 
 class TabBarController: UITabBarController {
-    
-    var tappedRestaurant: [Restaurant] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("selected restaurant", tappedRestaurant[0])
     }
 }

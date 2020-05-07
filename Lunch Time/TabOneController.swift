@@ -26,7 +26,11 @@ class TabOneController: UIViewController {
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var twitterHandle: UILabel!
     
+    var tappedRestaurant: [Restaurant] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("selected restaurant", tappedRestaurant)
     }
 }

@@ -40,8 +40,12 @@ class TabOneController: UIViewController {
         
         twitterHandle.text = (tappedRestaurant[0].contact?.twitter != nil) ? "@\(tappedRestaurant[0].contact?.twitter ?? "")" : ("")
         
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: (tappedRestaurant[0].location?.lat)!, longitude: (tappedRestaurant[0].location?.lng)!)
+        mapView.addAnnotation(annotation)
         
-//        twitterHandle.text = "@\(tappedRestaurant[0].contact?.twitter ?? "")"
+        let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        mapView.setRegion(region, animated: true)
         
         print("selected restaurant", tappedRestaurant[0])
     }

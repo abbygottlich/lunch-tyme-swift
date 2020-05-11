@@ -42,11 +42,13 @@ class TabOneController: UIViewController {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: (tappedRestaurant[0].location?.lat)!, longitude: (tappedRestaurant[0].location?.lng)!)
+        annotation.title = tappedRestaurant[0].name
+        annotation.subtitle = tappedRestaurant[0].category
         mapView.addAnnotation(annotation)
         
         let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(region, animated: true)
         
-        print("selected restaurant", tappedRestaurant[0])
+//        print("selected restaurant", tappedRestaurant[0])
     }
 }
